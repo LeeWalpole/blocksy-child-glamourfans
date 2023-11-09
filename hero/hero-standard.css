@@ -1,0 +1,28 @@
+/*
+HERO TEMPLATE: STANDARD 
+Header top, image bottom with gradient covering image box full width
+*/
+
+.lw-hero[data-hero="standard"] {
+  flex-direction: column;
+}
+
+.lw-hero[data-hero="standard"] .lw-meta {
+  align-self: center;
+}
+
+.lw-hero[data-hero="standard"] .hero-feature {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-image: var(--bg-gradient);
+}
+
+.lw-hero[data-hero="standard"] .hero-feature figure {
+  margin: 0 auto;
+  max-width: var(--narrow-container-max-width);
+  padding: 0;
+}

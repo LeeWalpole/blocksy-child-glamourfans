@@ -1,0 +1,83 @@
+/* HERO TEMPLATE: APP FEATURES */
+
+.lw-hero[data-hero="feature"] {
+  flex-direction: column;
+  gap: 40px;
+  border-bottom: none;
+  padding: 0 40px; /* Set default padding */
+}
+
+.lw-hero[data-hero="feature"] .hero-header {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+
+/* Adjust figure element for mobile devices */
+.lw-hero[data-hero="feature"] .hero-feature figure {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.lw-hero[data-hero="feature"] .hero-feature figure > * {
+  position: relative;
+  z-index: 2; /* Make phone appear above the heart */
+}
+
+.lw-hero[data-hero="feature"] .hero-feature figure img {
+  aspect-ratio: 1/1;
+}
+
+/* Pseudo-element for decorative background */
+.lw-hero[data-hero="feature"] .hero-feature figure::after {
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  z-index: 1;
+  /* Default size for mobile */
+  top: -15%;
+  left: -15%;
+  width: 130%;
+  height: 130%;
+}
+
+/* Set styles for desktop devices */
+@media (min-width: 768px) {
+  .lw-hero[data-hero="feature"] {
+    flex-direction: row;
+  }
+
+  .lw-hero[data-hero="feature"] .hero-header {
+    max-width: 48%;
+  }
+
+  .lw-hero[data-hero="feature"] .hero-header,
+  .lw-hero[data-hero="feature"] .hero-header .lw-meta {
+    text-align: left;
+    align-items: start;
+  }
+
+  .lw-hero[data-hero="feature"] .hero-feature figure {
+    width: 100%;
+    left: unset;
+    right: unset;
+    margin: 0;
+  }
+
+  .lw-hero[data-hero="feature"] .hero-feature figure::after {
+    /* Adjusted size for desktop */
+    top: -8%;
+    left: -8%;
+    width: 116%;
+    height: 116%;
+  }
+}

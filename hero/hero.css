@@ -1,0 +1,102 @@
+/*
+GENERAL HERO CODE
+*/
+
+:root {
+  --hero-title: 2.6em; /* Default value */
+  --hero-title-spacing: -0.08rem;
+  --hero-title-line-height: 1.16;
+  --hero-max-width: 100%;
+  --article-max-width: 100%;
+}
+
+/* Tailwind: md */
+@media (min-width: 768px) {
+  :root {
+    --hero-title: 3em; /* Value for viewports 480px and wider */
+    --hero-title-spacing: -0.16rem;
+    --hero-title-line-height: 1.2;
+    --hero-max-width: 1024px;
+    --hero-media-max-width: 1024px;
+    --article-max-width: 1024px;
+  }
+}
+
+/* Tailwind: 2xl */
+@media (min-width: 1536px) {
+  :root {
+    --hero-title: 4rem; /* Default value */
+    --hero-title-spacing: -0.08rem;
+    --hero-title-line-height: 1.16;
+    --hero-max-width: 1280px;
+    --hero-media-max-width: 800px;
+    --article-max-width: 1080px;
+  }
+}
+
+.lw-hero {
+  width: 100%;
+  position: relative;
+  max-width: var(--hero-max-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 40px;
+  gap: 40px;
+}
+
+@media (min-width: 1024px) {
+  .lw-hero {
+    gap: 80px;
+  }
+}
+
+.lw-hero .hero-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  width: 100%;
+  max-width: var(--hero-max-width);
+  gap: 20px;
+  padding: 0 40px;
+}
+
+.lw-hero .hero-header .hero-title {
+  font-size: var(--hero-title);
+  margin: 0;
+  line-height: var(--hero-title-line-height);
+  letter-spacing: var(--hero-title-spacing);
+}
+
+.lw-hero .hero-header .hero-text p {
+  margin: 0;
+}
+
+.lw-hero .hero-header .lw-meta {
+  display: flex;
+  /* align-items: center; */
+  flex-direction: row;
+  list-style: none;
+  gap: 15px;
+  font-weight: 600;
+  /* align-self: center; */
+  color: var(--paletteColor3);
+  padding-inline-start: 0%;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.04rem;
+  margin: 0;
+}
+
+.lw-meta-category a {
+  background-image: var(--bg-gradient);
+  padding: 6px 12px;
+  border-radius: 0.8em;
+  color: white;
+}
+
+.lw-meta-category a:hover {
+  color: white;
+}

@@ -1,0 +1,29 @@
+/*
+HERO TEMPLATE: Guide 
+Desktop: Header left, image right (1x1)
+Smartphone: Header top, image bottom full screen / (1x1)
+*/
+
+.lw-hero[data-hero="guide"] {
+  flex-direction: column;
+}
+
+.lw-hero[data-hero="guide"] .lw-meta {
+  align-self: center;
+}
+
+.lw-hero[data-hero="guide"] .hero-feature {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-image: var(--bg-gradient);
+}
+
+.lw-hero[data-hero="guide"] .hero-feature figure {
+  margin: 0 auto;
+  max-width: var(--narrow-container-max-width);
+  padding: 40px;
+}
